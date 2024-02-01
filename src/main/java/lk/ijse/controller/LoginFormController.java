@@ -17,7 +17,7 @@ public class LoginFormController {
     @FXML
     private TextField txtUserName;
 
-    public String username;
+    public static String username;
 
     @FXML
     void btnLoginOnAction(ActionEvent event) throws IOException {

@@ -14,30 +14,30 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ChatFormController">
    <children>
-      <AnchorPane prefHeight="54.0" prefWidth="400.0" style="-fx-background-color: #005E89;">
+      <AnchorPane layoutY="1.0" prefHeight="54.0" prefWidth="400.0" style="-fx-background-color: #34495e; -fx-background-radius: 25;">
          <children>
-            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="340.0" layoutY="3.0" onAction="#btnMinimizeOnAction" style="-fx-background-radius: 25;">
-               <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="40.0">
-                     <image>
-                        <Image url="@../images/icons8-minimize-60.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="344.0" layoutY="3.0" onAction="#btnMinimizeOnAction" prefHeight="25.0" prefWidth="30.0" style="-fx-background-radius: 25;">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../images/icons8-close-60.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </JFXButton>
-            <Label fx:id="lblUser" layoutX="59.0" layoutY="12.0" textFill="#dfe6e9">
+            <Label fx:id="lblUser" layoutX="59.0" layoutY="16.0" textFill="#dfe6e9">
                <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="13.0" layoutY="552.0" prefHeight="40.0" prefWidth="332.0" style="-fx-background-radius: 20; -fx-background-color: #dfe6e9;">
          <children>
-            <TextField fx:id="txtChatField" layoutX="46.0" prefHeight="40.0" prefWidth="243.0" promptText="Message" style="-fx-background-color: #dfe6e9; -fx-background-radius: 0;" stylesheets="@../../../../../../../IdeaProjects/Live-Chat-Application/src/main/resources/stylesheets/chat.css">
+            <TextField fx:id="txtChatField" layoutX="46.0" prefHeight="40.0" prefWidth="243.0" promptText="Type Something" style="-fx-background-color: #dfe6e9; -fx-background-radius: 0;" stylesheets="@../../../../../../../IdeaProjects/Live-Chat-Application/src/main/resources/stylesheets/chat.css">
                <font>
                   <Font name="Segoe UI Semibold" size="12.0" />
                </font>
@@ -58,20 +58,18 @@
                <padding>
                   <Insets left="3.0" />
                </padding>
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="30.0">
-                     <image>
-                        <Image url="@../../../../../../../IdeaProjects/Live-Chat-Application/src/main/resources/image/icons8-attach-50.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="295.0" layoutY="5.0">
+               <image>
+                  <Image url="@../images/icons8-clip-30.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
-      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="352.0" layoutY="552.0" onAction="#btnSendOnAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 25; -fx-background-color: #005E89;">
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="352.0" layoutY="552.0" onAction="#btnSendOnAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 25; -fx-background-color: #34495e;">
          <padding>
             <Insets left="3.0" />
          </padding>
@@ -79,7 +77,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="2.0" layoutY="2.0">
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="2.0" layoutY="2.0">
          <image>
             <Image url="@../images/icons8-user-96.png" />
          </image>
@@ -91,7 +89,7 @@
       </ScrollPane>
       <ImageView layoutX="362.0" layoutY="560.0">
          <image>
-            <Image url="@../../../../../../../IdeaProjects/Live-Chat-Application/src/main/resources/image/icons8-send-24.png" />
+            <Image url="@../images/icons8-send-24.png" />
          </image>
       </ImageView>
    </children>

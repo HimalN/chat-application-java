@@ -17,6 +17,7 @@ public class Launcher extends Application {
         Parent parent = FXMLLoader.load(getClass().getResource("/view/loginForm.fxml"));
         Scene scene = new Scene(parent);
         stage.setScene(scene);
+        stage.setTitle("Rio Chat");
         stage.show();
     }
 }

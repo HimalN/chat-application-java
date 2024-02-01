@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ChatFormController">
+   <children>
+      <AnchorPane prefHeight="54.0" prefWidth="400.0" style="-fx-background-color: #005E89;">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="340.0" layoutY="3.0" onAction="#btnMinimizeOnAction" style="-fx-background-radius: 25;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../images/icons8-minimize-60.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="lblUser" layoutX="59.0" layoutY="12.0" textFill="#dfe6e9">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="13.0" layoutY="552.0" prefHeight="40.0" prefWidth="332.0" style="-fx-background-radius: 20; -fx-background-color: #dfe6e9;">
+         <children>
+            <TextField fx:id="txtChatField" layoutX="46.0" prefHeight="40.0" prefWidth="243.0" promptText="Message" style="-fx-background-color: #dfe6e9; -fx-background-radius: 0;" stylesheets="@../../../../../../../IdeaProjects/Live-Chat-Application/src/main/resources/stylesheets/chat.css">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="emoji" contentDisplay="GRAPHIC_ONLY" layoutX="-2.0" onAction="#btnEmojiOnAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 25;">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0">
+                     <image>
+                        <Image url="@../images/icons8-smiley-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="291.0" onAction="#btnAttachOnAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 25; -fx-background-color: #dfe6e9;">
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../../../../../../../IdeaProjects/Live-Chat-Application/src/main/resources/image/icons8-attach-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="352.0" layoutY="552.0" onAction="#btnSendOnAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 25; -fx-background-color: #005E89;">
+         <padding>
+            <Insets left="3.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="2.0" layoutY="2.0">
+         <image>
+            <Image url="@../images/icons8-user-96.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutY="54.0" prefHeight="492.0" prefWidth="400.0">
+         <content>
+            <VBox fx:id="vBox" prefHeight="147.0" prefWidth="398.0" />
+         </content>
+      </ScrollPane>
+      <ImageView layoutX="362.0" layoutY="560.0">
+         <image>
+            <Image url="@../../../../../../../IdeaProjects/Live-Chat-Application/src/main/resources/image/icons8-send-24.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

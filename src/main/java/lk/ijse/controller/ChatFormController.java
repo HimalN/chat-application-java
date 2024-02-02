@@ -2,16 +2,20 @@ package lk.ijse.controller;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
+import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import javax.swing.text.html.ImageView;
@@ -36,6 +40,8 @@ public class ChatFormController {
     private TextField txtChatField;
     @FXML
     private VBox vBox;
+    private Popup emojiPopup;
+    private ListView<String> emojiListView;
 
     Socket socket;
     DataInputStream reader;
@@ -124,6 +130,11 @@ public class ChatFormController {
                 throw new RuntimeException(e);
             }
         }).start();
+        emojiPopup = new Popup();
+        emojiListView = new ListView<>();
+        emojiListView.setItems(getEmojiList());
+        emojiListView.setOnMouseClicked(event -> onEmojiClicked());
+        emojiPopup.getContent().add(emojiListView);
     }
 
     @FXML
@@ -154,7 +165,22 @@ public class ChatFormController {
 
     @FXML
     void btnEmojiOnAction(ActionEvent event) {
+        emojiPopup.show(txtChatField.getScene().getWindow());
+    }
 
+    private ObservableList<String> getEmojiList() {
+        return FXCollections.observableArrayList(
+                "😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "😊", "😇", "🙂", "🙃", "😉", "😌",
+                "😍", "😘", "😗", "😙", "😚", "😋", "😛", "😜", "😝", "😎", "🤓", "🧐", "😏", "😒",
+                "👍", "👎", "👌", "✌️", "🤞", "🤘", "🤙", "👈", "👉", "👆", "👇", "✋", "🤚", "🖐️"
+        );
+    }
+    private void onEmojiClicked() {
+        String selectedEmoji = emojiListView.getSelectionModel().getSelectedItem();
+        if (selectedEmoji != null) {
+            txtChatField.appendText(selectedEmoji);
+            emojiPopup.hide();
+        }
     }
     @FXML
     void btnMinimizeOnAction(ActionEvent event) {

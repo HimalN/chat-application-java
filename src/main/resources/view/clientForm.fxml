@@ -64,7 +64,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <TextField fx:id="txtChatField" layoutX="46.0" layoutY="3.0" prefHeight="40.0" prefWidth="394.0" promptText="Type Something" style="-fx-background-color: #dfe6e9; -fx-background-radius: 0;" stylesheets="@../../../../../../../IdeaProjects/Live-Chat-Application/src/main/resources/stylesheets/chat.css">
+            <TextField fx:id="txtChatField" layoutX="40.0" layoutY="1.0" prefHeight="40.0" prefWidth="394.0" promptText="Type Something" style="-fx-background-color: #dfe6e9; -fx-background-radius: 0;">
                <font>
                   <Font name="Segoe UI Semibold" size="12.0" />
                </font>

@@ -170,7 +170,7 @@ public class ChatFormController {
     private ObservableList<String> getEmojiList() {
         return FXCollections.observableArrayList(
                 "😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "😊", "😇",
-                "👍", "👎", "👌", "✌️", "🤙", "👈", "👉", "👆", "👇", "✋", "🤚", "🖐️"
+                "👍", "👎", "👌", "✌️", "✋", "🖐️" ,"❤", "❤"
         );
     }
     private void onEmojiClicked() {

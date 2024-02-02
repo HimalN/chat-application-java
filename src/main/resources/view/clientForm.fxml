@@ -23,7 +23,7 @@
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0">
                      <image>
-                        <Image url="@../images/icons8-close-60.png" />
+                        <Image url="@../images/icons8-minimize-50.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -71,13 +71,20 @@
             </TextField>
          </children>
       </AnchorPane>
-      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="506.0" layoutY="550.0" onAction="#btnSendOnAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 25; -fx-background-color: #34495e;">
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="504.0" layoutY="545.0" onAction="#btnSendOnAction" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 25; -fx-background-color: #34495e;">
          <padding>
             <Insets left="3.0" />
          </padding>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../images/icons8-send-24.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </JFXButton>
       <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="2.0" layoutY="2.0">
          <image>
@@ -86,13 +93,8 @@
       </ImageView>
       <ScrollPane layoutY="54.0" prefHeight="487.0" prefWidth="550.0">
          <content>
-            <VBox fx:id="vBox" prefHeight="147.0" prefWidth="518.0" />
+            <VBox fx:id="vBox" prefHeight="147.0" prefWidth="539.0" />
          </content>
       </ScrollPane>
-      <ImageView layoutX="515.0" layoutY="558.0">
-         <image>
-            <Image url="@../images/icons8-send-24.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

@@ -66,7 +66,7 @@ public class ChatFormController {
                             if(condition.equals("this")){
                                 HBox hBox = new HBox();
                                 hBox.setStyle("-fx-alignment: top-right;-fx-fill-height: true;-fx-min-height: 50;-fx-pref-width: 520;-fx-max-width: 520;-fx-padding: 10");
-                                Label messageLbl = new Label("Me: "+message);
+                                Label messageLbl = new Label(message);;
                                 messageLbl.setStyle("-fx-background-color:  #1B1464;-fx-background-radius:15;-fx-font-size: 14;-fx-font-weight: normal;-fx-text-fill: white;-fx-wrap-text: true;-fx-alignment: center-left;-fx-content-display: left;-fx-padding: 10;-fx-max-width: 350;");
                                 hBox.getChildren().add(messageLbl);
                                 vBox.getChildren().add(hBox);
@@ -74,7 +74,7 @@ public class ChatFormController {
                             } else {
                                 HBox hBox = new HBox();
                                 hBox.setStyle("-fx-alignment: top-left;-fx-fill-height: true;-fx-min-height: 50;-fx-pref-width: 520;-fx-max-width: 520;-fx-padding: 10");
-                                Label messageLbl = new Label(LoginFormController.username+": "+message);
+                                Label messageLbl = new Label(message);
                                 messageLbl.setStyle("-fx-background-color:  #4B6EAF;-fx-background-radius:15;-fx-font-size: 14;-fx-font-weight: normal;-fx-text-fill: white;-fx-wrap-text: true;-fx-alignment: center-left;-fx-content-display: left;-fx-padding: 10;-fx-max-width: 350;");
                                 hBox.getChildren().add(messageLbl);
                                 vBox.getChildren().add(hBox);
@@ -100,7 +100,7 @@ public class ChatFormController {
 
                                 if (condition.equals("this")) {
                                     Label label = new Label("Me:");
-                                    label.setStyle("-fx-background-color:  #27ae60;-fx-background-radius:15;-fx-font-size: 14;-fx-font-weight: normal;-fx-text-fill: white;-fx-wrap-text: true;-fx-alignment: center-left;-fx-content-display: left;-fx-padding: 10;-fx-max-width: 350;");
+                                    label.setStyle("-fx-background-color:  #1B1464;-fx-background-radius:15;-fx-font-size: 14;-fx-font-weight: normal;-fx-text-fill: white;-fx-wrap-text: true;-fx-alignment: center-left;-fx-content-display: left;-fx-padding: 10;-fx-max-width: 350;");
                                     BorderPane borderPane1 = new BorderPane();
                                     borderPane1.setRight(label);
 
@@ -111,7 +111,7 @@ public class ChatFormController {
                                     condition = "";
                                 } else {
                                     Label label = new Label(message);
-                                    label.setStyle("-fx-background-color:  #9b2b2b;-fx-background-radius:15;-fx-font-size: 14;-fx-font-weight: normal;-fx-text-fill: white;-fx-wrap-text: true;-fx-alignment: center-right;-fx-content-display: left;-fx-padding: 10;-fx-max-width: 350;");
+                                    label.setStyle("-fx-background-color:  #4B6EAF;-fx-background-radius:15;-fx-font-size: 14;-fx-font-weight: normal;-fx-text-fill: white;-fx-wrap-text: true;-fx-alignment: center-right;-fx-content-display: left;-fx-padding: 10;-fx-max-width: 350;");
                                     BorderPane borderPane1 = new BorderPane();
                                     borderPane1.setLeft(label);
 
@@ -126,6 +126,7 @@ public class ChatFormController {
                         });
                     }
                 }
+
             }catch (IOException e){
                 throw new RuntimeException(e);
             }
@@ -193,7 +194,7 @@ public class ChatFormController {
         String message = txtChatField.getText().trim();
         String sender = lblUser.getText();
         writer.writeUTF("TEXT");
-        writer.writeUTF(message);
+        writer.writeUTF(sender+": "+message);
         writer.flush();
         System.out.println(sender+": "+message);
         txtChatField.clear();

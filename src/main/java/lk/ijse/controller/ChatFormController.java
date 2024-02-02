@@ -29,7 +29,6 @@ import java.sql.SQLOutput;
 public class ChatFormController {
     @FXML
     private JFXButton emoji;
-
     @FXML
     private JFXButton btnmini;
     @FXML
@@ -42,7 +41,6 @@ public class ChatFormController {
     private VBox vBox;
     private Popup emojiPopup;
     private ListView<String> emojiListView;
-
     Socket socket;
     DataInputStream reader;
     DataOutputStream writer;

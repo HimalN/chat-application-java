@@ -8,23 +8,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #34495e;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+<AnchorPane prefHeight="470.0" prefWidth="550.0" style="-fx-background-color: #34495e;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
    <children>
-      <TextField fx:id="txtUserName" layoutX="67.0" layoutY="379.0" onAction="#txtUserNameOnAction" prefHeight="44.0" prefWidth="266.0" promptText="Username" style="-fx-background-radius: 25;" stylesheets="@../css/textField.css">
+      <TextField fx:id="txtUserName" layoutX="142.0" layoutY="340.0" onAction="#txtUserNameOnAction" prefHeight="44.0" prefWidth="266.0" promptText="Username" style="-fx-background-radius: 25;" stylesheets="@../css/textField.css">
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <Button fx:id="btnLogin" layoutX="158.0" layoutY="432.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="44.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Login" textFill="#025479">
+      <Button fx:id="btnLogin" layoutX="233.0" layoutY="398.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="44.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Login" textFill="#025479">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Label layoutX="98.0" layoutY="87.0" prefHeight="58.0" prefWidth="206.0" text="Rio Chat" textFill="WHITE">
+      <Label layoutX="172.0" layoutY="60.0" prefHeight="58.0" prefWidth="206.0" text="Rio Chat" textFill="WHITE">
          <font>
             <Font name="Bauhaus 93" size="51.0" />
          </font>
       </Label>
-      <ImageView fitHeight="185.0" fitWidth="188.0" layoutX="126.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="185.0" fitWidth="188.0" layoutX="183.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/icons8-parrot-96.png" />
          </image>

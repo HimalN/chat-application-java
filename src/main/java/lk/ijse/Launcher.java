@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import lk.ijse.controller.Server;
 
 import java.io.IOException;
 
@@ -19,5 +20,6 @@ public class Launcher extends Application {
         stage.setScene(scene);
         stage.setTitle("Rio Chat");
         stage.show();
+        Server.start();
     }
 }
